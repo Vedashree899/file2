@@ -1,0 +1,19 @@
+df2=pd.read_csv(r"C:\Users\guddu\Downloads\AI Batch\Mall_Customers.csv")
+df2
+df2.isnull().sum()
+df2.rename(columns={"CustomerID":"id","Genre":"gender","Age":"age","Annual Income (k$)":"income","Spending Score (1-100)":"score"},inplace=True)
+df2
+plt.scatter(df2.income,df2.score)from sklearn.cluster import KMeans
+km=KMeans(n_clusters=5)
+km.fit(df2[["income","score"]])
+df2["cluster_group"]=km.labels_
+df2
+df2["cluster_group"].value_counts()
+sns.scatterplot(x="income",y="
+most_buying_users=df2[df2["cluster_group"]==2]
+most_buying_users #filtered out the most expensive user base to show customized 
+print(len(most_buying_users))
+least_buying_users=df2[df2["cluster_group"]==3]
+least_buying_users #filtered out the least expensive user base
+print(len(least_buying_users))
+'Hometask : Make more cluster 
