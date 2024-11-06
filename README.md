@@ -1,3 +1,4 @@
+numpy
 [[10  2]
  [30 40]] <class 'numpy.matrix'>
 nm2=np.matrix([[10,20],[300,400]])
