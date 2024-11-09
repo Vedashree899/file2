@@ -34,5 +34,5 @@ def index():
     # Route to serve the video feed
     return Response(generate_frames(),mimetype='multipart/x-mixed-replace; boundary=frame')
     if__name__=='main__':
-    app.run(debug=
+    app.run(debug=true)
         
