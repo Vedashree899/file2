@@ -8,7 +8,7 @@ if not os.path.exists(model_path):
   raise FilenotFoundError(f"model file not found at :{model_path}")
   # Load yolov5 model from the provided path
   model = torch.hub.load('ultralytics/yolov5','custom',path=model_path,force_reload=True)bre
-  # Function to generate video frames with Yolov5 detection
+  # Function to generate video frames with   Yolov5  detection
   def generate_frames():
     camera = cv2.videoCapture(0)
     while True:
